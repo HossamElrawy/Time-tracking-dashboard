@@ -1,0 +1,242 @@
+.infoDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    background-color: hsl(235, 46%, 20%);
+    padding: 0 0 28px 28px;
+    border-radius: 12px;
+    height: 100%;
+}
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 16px;
+}
+.jeremy {
+    width: 78px;
+    border: 3px solid white;
+    border-radius: 50px;
+}
+.jeremyDiv {
+    background-color: hsl(246, 80%, 60%);
+    width: calc(100% + 28px);
+    margin-left: -28px;
+    padding: 34px 28px 56px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.nameDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.reportFor {
+    font-size: 15px;
+    font-weight: 300;
+    color: hsl(236, 100%, 87%);
+    margin-top: 24px;
+}
+.name {
+    font-weight: 300;
+    color: white;
+    font-size: 40px;
+    width: fit-content;
+}
+.hiddenRadio {
+    display: none;
+}
+
+.option {
+    color: hsl(235, 45%, 61%);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+.option:hover {
+    color: white;
+}
+input[type="radio"]:checked + .option {
+    color: white;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+    height: 100%;
+}
+.element {
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    padding-top: 45px;
+}
+.element0,
+.element1,
+.element2,
+.element3,
+.element4,
+.element5 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+}
+.element0 {
+    background-color: hsl(15, 100%, 70%);
+}
+.element1 {
+    background-color: hsl(195, 74%, 62%);
+}
+.element2 {
+    background-color: hsl(348, 100%, 68%);
+}
+.element3 {
+    background-color: hsl(145, 58%, 55%);
+}
+.element4 {
+    background-color: hsl(264, 64%, 52%);
+}
+.element5 {
+    background-color: hsl(43, 84%, 65%);
+}
+.icon {
+    position: absolute;
+    right: 16px;
+    top: -8px;
+    z-index: 0;
+}
+.insideDiv {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 30px 33px 33px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.insideDiv:hover:not(:has(.elipsisContainer:hover)) {
+  background-color: hsl(235, 45%, 61%);
+}
+.titleDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+}
+.hours {
+    font-size: 54px;
+    line-height: 42px;
+    color: white;
+}
+.last {
+    font-weight: 300;
+    font-size: 15.5px;
+    color: hsl(236, 100%, 87%);
+}
+.elipsisContainer {
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.elipsisContainer:hover {
+    transform: scale(1.3);
+}
+.hoursInside {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+@media (max-width : 800px) {
+    .infoDiv {
+        padding: 0 32px 20px;
+        gap: 26px;
+        height: auto;
+    }
+    .options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 0;
+        margin-bottom: 0;
+    }
+    .jeremy {
+        width: 64px;
+    }
+    .jeremyDiv {
+        width: calc(100% + 64px);
+        margin-left: -32px;
+        padding: 32px 39px 30px 32px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+    .nameDiv {
+        gap: 8px;
+    }
+    .reportFor {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    .name {
+        font-size: 24px;
+    }
+    
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+    .element {
+        padding-top: 38px;
+    }
+    .element0,
+    .element1,
+    .element2,
+    .element3,
+    .element4,
+    .element5 {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50px;
+    }
+    .hoursInside {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .icon {
+        top: -10px;
+    }
+    .insideDiv {
+        padding: 30px 24px 28px;
+        gap: 16px;
+    }
+    .hours {
+        font-size: 30px;
+        line-height: 26px;
+    }
+    .last {
+        font-size: 15.5px;
+    }
+}

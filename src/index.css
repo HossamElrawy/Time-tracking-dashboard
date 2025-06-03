@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 253px 165px;
+  font-family: "Rubik";
+}
+#root {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 255px 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+@media (max-width : 800px) {
+  body {
+    padding: 81px 24px;  
+  }
+  #root {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
